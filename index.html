@@ -10,6 +10,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -51,21 +55,21 @@
             <li>
               <a href="" target="_blank" class="icon-box">
                 <svg class="header-icon" width="28" height="28">
-                  <use href="./images/icons.svg#icon-facebook"></use>
+                  <use href="./images/icons.svg#facebook"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a href="" target="_blank" class="icon-box">
                 <svg class="header-icon" width="28" height="28">
-                  <use href="./images/icons.svg#icon-instagram"></use>
+                  <use href="./images/icons.svg#instagram"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a href="" target="_blank" class="icon-box">
                 <svg class="header-icon" width="28" height="28">
-                  <use href="./images/icons.svg#icon-youtube"></use>
+                  <use href="./images/icons.svg#youtube"></use>
                 </svg>
               </a>
             </li>
@@ -93,12 +97,13 @@
             <a href="" class="hero-order">
               Order
               <svg class="btn-icon" width="24" height="16">
-                <use href="./images/icons.svg#icon-arrow"></use>
+                <use href="./images/icons.svg#arrow"></use>
               </svg>
             </a>
           </div>
           <div class="star-wrapper">
             <img
+              class="animate__animated animate__rotateIn"
               src="./images/star-yellow.png"
               alt="star yellow"
               width="52"
@@ -132,18 +137,15 @@
               symbolism, which gives it a special meaning.
             </p>
           </div>
-          <img
-            class="about-us-pic"
-            src="./images/vyshyvanka-about-us.jpg"
-            alt="vyshyvanka photo"
-            width="709"
-            height="545"
-          />
-        </div>
-        <div class="about-us-element">
-          <svg class="grey-element" width="545" height="484">
-            <use href="./images/icons.svg#icon-grey-element"></use>
-          </svg>
+          <div class="about-us-img-wrapper">
+            <img
+              class="about-us-pic"
+              src="./images/vyshyvanka-about-us.jpg"
+              alt="vyshyvanka photo"
+              width="709"
+              height="545"
+            />
+          </div>
         </div>
       </section>
 
@@ -233,11 +235,6 @@
             </li>
           </ul>
         </div>
-        <div class="collection-element">
-          <svg class="yellow-element" width="338" height="300">
-            <use href="./images/icons.svg#icon-yellow-element"></use>
-          </svg>
-        </div>
       </section>
 
       <section class="page-fullviewphoto section">
@@ -253,52 +250,53 @@
 
       <section class="page-order section" id="customer-order">
         <div class="container">
-          <img
-            class="order-pic"
-            src="./images/order-vyshyvanka.jpg"
-            alt="vyshyvanka close up"
-            width="524"
-            height="521"
-          />
+          <div class="order-img-wrapper">
+            <img
+              class="order-pic"
+              src="./images/order-vyshyvanka.jpg"
+              alt="vyshyvanka close up"
+              width="524"
+              height="521"
+            />
+          </div>
           <div class="order-info">
             <h2 class="second-title">
               <span class="color-accent">Your order</span> is our priority:
               Personalized approach and quality of service
             </h2>
-            <form class="order-form">
+            <form class="order-form" name="order-form">
               <input
                 class="order-input"
                 type="text"
-                name="User full name"
+                name="userfullname"
                 placeholder="Enter your full name"
                 required
               />
               <input
                 class="order-input"
                 type="email"
-                name="User email"
+                name="useremail"
                 placeholder="Enter your email"
                 required
               />
               <textarea
                 class="order-input"
                 type="text"
-                name="User comments"
+                name="usercomments"
                 placeholder="Comments"
               ></textarea>
-              <button class="order-btn" type="submit">
+              <button
+                class="order-btn"
+                type="submit"
+                aria-label="Send order button"
+              >
                 Send
                 <svg class="btn-icon" width="24" height="16">
-                  <use href="./images/icons.svg#icon-arrow"></use>
+                  <use href="./images/icons.svg#arrow"></use>
                 </svg>
               </button>
             </form>
           </div>
-        </div>
-        <div class="page-order-element">
-          <svg class="grey-element" width="545" height="484">
-            <use href="./images/icons.svg#icon-grey-element"></use>
-          </svg>
         </div>
       </section>
 
@@ -382,11 +380,6 @@
           A touch of <span class="color-accent">Ukrainian</span> culture in
           every embroidery
         </p>
-      </div>
-      <div class="footer-element">
-        <svg class="yellow-element" width="595" height="528">
-          <use href="./images/icons.svg#icon-yellow-element"></use>
-        </svg>
       </div>
     </footer>
   </body>

@@ -1,4 +1,4 @@
-/* Загальні стилі */
+/* General Styles */
 
 body {
   font-family: "Manrope", sans-serif;
@@ -77,7 +77,6 @@ button {
 
 input,
 textarea {
-  outline: none;
   resize: none;
 }
 
@@ -86,22 +85,6 @@ textarea {
   padding-top: 75px;
   padding-bottom: 75px;
   margin: 0 auto;
-}
-
-.btn-icon {
-  margin-left: 10px;
-}
-
-.yellow-element {
-  fill: #ecd979;
-}
-
-.grey-element {
-  fill: #fcf9f9;
-}
-
-.black-element {
-  fill: #1c2225;
 }
 
 /* Header Styles */
@@ -140,6 +123,7 @@ textarea {
 .nav-link {
   padding-top: 17px;
   padding-bottom: 17px;
+  transition: color 250ms ease-in-out;
 }
 
 .nav-link,
@@ -162,6 +146,8 @@ textarea {
   margin-left: auto;
   border: 1px solid rgba(252, 249, 249, 0.1);
   border-radius: 15px;
+
+  transition: border-color 250ms ease-in-out;
 }
 
 .address-link {
@@ -188,6 +174,9 @@ textarea {
   border-radius: 15px;
   padding: 8px;
   background-color: rgba(252, 249, 249, 0.1);
+
+  transition-property: border-color, background-color;
+  transition: 250ms ease-in-out;
 }
 
 .icon-box:hover,
@@ -234,6 +223,11 @@ textarea {
 }
 
 .hero-order {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
   font-weight: 600;
   font-size: 16px;
   letter-spacing: -0.04em;
@@ -248,6 +242,8 @@ textarea {
   margin-top: 40px;
   width: 168px;
   height: 50px;
+
+  transition: border-color 250ms ease-in-out;
 }
 
 .hero-order:hover,
@@ -276,16 +272,8 @@ textarea {
 /* Main Section 2 (Page About Us) */
 
 .page-about-us {
-  position: relative;
   padding-top: 75px;
   padding-bottom: 75px;
-}
-
-.about-us-element {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
 }
 
 .page-about-us .container {
@@ -302,34 +290,54 @@ textarea {
   padding-bottom: 20px;
 }
 
-.about-us-pic {
+.about-us-img-wrapper {
   margin-left: auto;
+  position: relative;
+}
+
+.about-us-img-wrapper::after {
+  content: "";
+  display: block;
+  width: 545px;
+  height: 484px;
+
+  position: absolute;
+  bottom: -80px;
+  right: -100px;
+
+  background-image: url(../images/grey.png);
+  background-repeat: no-repeat;
+}
+
+.about-us-pic {
   border-radius: 4px;
 }
 
 /* Main Section 3 (Page Our Collection) */
 
-.page-our-collection {
-  position: relative;
-}
-
-.collection-element {
-  width: 169px;
-  height: 300px;
-  position: absolute;
-  overflow: hidden;
-  top: 301px;
-  z-index: -1;
-}
-
-.collection-element .yellow-element {
-  transform: translateX(-170px);
-}
-
 .collection-list {
+  position: relative;
+
   display: flex;
   flex-wrap: wrap;
   gap: 40px 20px;
+}
+
+.collection-list::after {
+  content: "";
+  display: block;
+  width: 169px;
+  height: 300px;
+
+  position: absolute;
+  top: 127px;
+  left: -100px;
+
+  background-image: url(../images/yellow.png);
+  background-repeat: no-repeat;
+  background-size: 338px 300px;
+  background-position: right top;
+  z-index: -1;
 }
 
 .collection-item {
@@ -367,7 +375,6 @@ textarea {
 /* Main Section 4 (Page Full View Photo) */
 
 .page-fullviewphoto {
-  margin: 0 auto;
   width: 100%;
   overflow: hidden;
 }
@@ -382,30 +389,12 @@ textarea {
 
 /* Main Section 5 (Customer Order) */
 
-.page-order {
-  position: relative;
-}
-
-.page-order-element {
-  position: absolute;
-  z-index: -1;
-  width: 325px;
-  height: 484px;
-  bottom: 75px;
-  overflow: hidden;
-}
-
-.page-order-element .grey-element {
-  transform: translateX(-221px);
-}
-
 .page-order .container {
   display: flex;
   flex-wrap: wrap;
 }
 
 .order-pic {
-  align-self: flex-start;
   border-radius: 4px;
 }
 
@@ -436,11 +425,12 @@ textarea {
   font-size: 16px;
   letter-spacing: -0.02em;
   color: #fcf9f9;
+
+  transition: border-color 250ms ease-in-out;
 }
 
-.order-input:focus,
-.order-input:focus-within {
-  border: 1px solid rgba(252, 249, 249, 0.6);
+.order-input:focus {
+  border-color: rgba(252, 249, 249, 0.6);
 }
 
 .order-input::placeholder {
@@ -453,6 +443,11 @@ textarea.order-input {
 }
 
 .order-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
   width: 168px;
   border: 1px solid rgba(252, 249, 249, 0.1);
   border-radius: 15px;
@@ -460,12 +455,35 @@ textarea.order-input {
   background-color: #1c2225;
   font-weight: 600;
   text-transform: uppercase;
+  cursor: pointer;
   color: #fcf9f9;
+
+  transition: border-color 250ms ease-in-out;
 }
 
 .order-btn:hover,
 .order-btn:focus {
   border-color: #ecd979;
+}
+
+.order-img-wrapper {
+  position: relative;
+}
+
+.order-img-wrapper::after {
+  content: "";
+  display: block;
+  width: 325px;
+  height: 484px;
+
+  position: absolute;
+  bottom: 0;
+  left: -100px;
+
+  background-image: url(../images/grey.png);
+  background-repeat: no-repeat;
+  background-size: 545px 484px;
+  background-position: right top;
 }
 
 /* Main Section 6 (Testimonials) */
@@ -520,29 +538,9 @@ textarea.order-input {
 /* Footer Styles */
 
 .page-footer {
-  max-width: 1440px;
-  margin: 0 auto;
   position: relative;
   margin-top: 150px;
   border-top: 1px solid rgba(252, 249, 249, 0.1);
-}
-
-.footer-element {
-  position: absolute;
-  z-index: -1;
-  overflow: hidden;
-  width: 496px;
-  height: 363px;
-  right: 0;
-  top: 0;
-}
-
-.footer-element .yellow-element {
-  transform: translateY(-61px);
-}
-
-.page-footer .container {
-  justify-content: flex-start;
 }
 
 .page-footer .nav-links {
