@@ -45,6 +45,11 @@
             </li>
           </ul>
         </nav>
+        <button class="nav-btn" type="button">
+          <svg class="nav-lines" width="36" height="24">
+            <use href="./images/icons.svg#nav"></use>
+          </svg>
+        </button>
         <div class="contacts-wrapper">
           <address class="address-links">
             <a href="tel:+380684439426" class="address-link"
@@ -81,15 +86,8 @@
     <main>
       <section class="page-hero">
         <div class="container">
-          <img
-            class="hero-pic"
-            src="./images/girl-hero.jpg"
-            alt="girl photo"
-            width="392"
-            height="545"
-          />
           <div class="title-place">
-            <h1 class="hero-title">
+            <h1 class="hero-title animate__animated animate__fadeInDown">
               Reviving the traditional
               <span class="color-accent">Ukrainian</span> artistry in every
               stitch.
@@ -101,6 +99,13 @@
               </svg>
             </a>
           </div>
+          <img
+            class="hero-pic animate__animated animate__fadeInLeft"
+            src="./images/girl-hero.jpg"
+            alt="girl photo"
+            width="392"
+            height="545"
+          />
           <div class="star-wrapper">
             <img
               class="animate__animated animate__rotateIn"
@@ -142,8 +147,8 @@
               class="about-us-pic"
               src="./images/vyshyvanka-about-us.jpg"
               alt="vyshyvanka photo"
-              width="709"
-              height="545"
+              width="335"
+              height="499"
             />
           </div>
         </div>
@@ -382,5 +387,43 @@
         </p>
       </div>
     </footer>
+
+    <div class="menu-overlay is-open">
+      <div class="menu">
+        <div class="address-close">
+          <a href="tel:+380684439426" class="address-menu"
+            >+380 (68) 443-94-26</a
+          >
+          <button class="close-menu" id="closeMenu" type="button">
+            <svg class="close-menu-btn" width="36" height="36">
+              <use href="./images/icons.svg#close-menu"></use>
+            </svg>
+          </button>
+        </div>
+        <ul class="menu-links">
+          <li>
+            <a class="menu-link" href="">About us</a>
+          </li>
+          <li>
+            <a class="menu-link" href="">Our collection</a>
+          </li>
+          <li>
+            <a class="menu-link" href="">Customer order</a>
+          </li>
+          <li>
+            <a class="menu-link" href="">Testimonials</a>
+          </li>
+        </ul>
+      </div>
+      <div class="menu-element-wrapper">
+        <img
+          class="menu-element"
+          src="./images/black.png"
+          alt="Black vyshyvanka element"
+          width="340"
+          height="302"
+        />
+      </div>
+    </div>
   </body>
 </html>
