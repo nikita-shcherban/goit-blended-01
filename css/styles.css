@@ -2,14 +2,23 @@
 html {
   scroll-behavior: smooth;
 }
+
+:root {
+  --black: #1c2225;
+  --yellow: #ecd979;
+  --white: #fcf9f9;
+  --font-family: "Manrope", sans-serif;
+  --second-family: "DM Sans", sans-serif;
+}
+
 body {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-family), sans-serif;
   font-weight: 400;
   font-size: 14px;
   letter-spacing: -0.04em;
   line-height: normal;
   color: rgba(252, 249, 249, 0.4);
-  background-color: #1c2225;
+  background-color: var(--black);
 }
 
 img {
@@ -51,7 +60,7 @@ svg {
   font-size: 32px;
   line-height: 1.375;
   letter-spacing: -0.03em;
-  color: #fcf9f9;
+  color: var(--white);
   margin-bottom: 40px;
 }
 
@@ -144,12 +153,12 @@ button {
 
 .nav-link,
 .address-link {
-  color: #fcf9f9;
+  color: var(--white);
 }
 
 .nav-link:hover,
 .nav-link:focus {
-  color: #ecd979;
+  color: var(--yellow);
 }
 
 .contacts-wrapper {
@@ -176,7 +185,7 @@ button {
 
 .address-links:hover,
 .address-links:focus {
-  border-color: #ecd979;
+  border-color: var(--yellow);
 }
 
 .header-social {
@@ -197,12 +206,12 @@ button {
 
 .icon-box:hover,
 .icon-box:focus {
-  border-color: #ecd979;
+  border-color: var(--yellow);
   background-color: transparent;
 }
 
 .header-social .header-icon {
-  fill: #fcf9f9;
+  fill: var(--white);
 }
 
 @media (max-width: 767px) {
@@ -236,6 +245,8 @@ button {
 
 .hero-pic {
   border-radius: 4px;
+  object-fit: cover;
+  height: 545px;
 }
 
 .hero-title {
@@ -243,12 +254,12 @@ button {
   font-size: 44px;
   line-height: 1.09091;
   letter-spacing: -0.03em;
-  color: #fcf9f9;
+  color: var(--white);
   width: 335px;
 }
 
 .color-accent {
-  color: #ecd979;
+  color: var(--yellow);
 }
 
 .hero-order {
@@ -261,7 +272,7 @@ button {
   font-size: 14px;
   letter-spacing: -0.04em;
   text-transform: uppercase;
-  color: #fcf9f9;
+  color: var(--white);
   text-align: center;
 
   border: 1px solid rgba(252, 249, 249, 0.1);
@@ -278,7 +289,7 @@ button {
 
 .hero-order:hover,
 .hero-order:focus {
-  border-color: #ecd979;
+  border-color: var(--yellow);
 }
 
 .star-wrapper {
@@ -338,6 +349,8 @@ button {
 
 .about-us-pic {
   border-radius: 4px;
+  object-fit: cover;
+  height: 499px;
 }
 
 /* Main Section 3 (Page Our Collection) */
@@ -346,8 +359,8 @@ button {
   position: relative;
 
   display: flex;
-  flex-wrap: wrap;
-  gap: 40px 20px;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .collection-list::after {
@@ -368,7 +381,7 @@ button {
 }
 
 .collection-item {
-  width: calc((100% - 20px * 2) / 3);
+  width: 100%;
 }
 
 .collection-wrapper {
@@ -376,13 +389,14 @@ button {
 }
 
 .vyshyvanka-name {
-  margin-bottom: 8px;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #fcf9f9;
+  color: var(--white);
+
+  margin-bottom: 8px;
 }
 
 .vyshyvanka-price {
@@ -391,12 +405,20 @@ button {
   letter-spacing: 0.05em;
 }
 
+@media screen and (max-width: 767.98px) {
+  .vyshyvanka-price {
+    display: none;
+  }
+}
+
 .page-our-collection .second-title {
   text-align: center;
 }
 
 .collection-pic {
   border-radius: 4px;
+  object-fit: fill;
+  height: 400px;
 }
 
 /* Main Section 4 (Page Full View Photo) */
@@ -407,8 +429,7 @@ button {
 }
 
 .fullviewphoto {
-  max-width: 100vw;
-  min-height: 776px;
+  height: 500px;
   object-fit: cover;
   object-position: center;
   overflow: hidden;
@@ -430,6 +451,27 @@ button {
   line-height: 1.31818;
 }
 
+.page-order .mobile-title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.375;
+  letter-spacing: -0.03em;
+  color: var(--white);
+
+  width: 335px;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 767.98px) {
+  .page-order .second-title {
+    display: none;
+  }
+
+  .order-img-wrapper {
+    display: none;
+  }
+}
+
 .order-info {
   display: flex;
   flex-direction: column;
@@ -439,19 +481,22 @@ button {
 .order-form {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .order-input {
-  width: 508px;
-  padding: 14px 16px;
   border: 1px solid rgba(252, 249, 249, 0.1);
   border-radius: 15px;
   background-color: transparent;
   margin-bottom: 20px;
-  font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: -0.02em;
-  color: #fcf9f9;
+  color: var(--white);
+
+  padding: 14px 16px;
+  width: 335px;
+  height: 47px;
 
   transition: border-color 250ms ease-in-out;
 }
@@ -469,28 +514,36 @@ textarea.order-input {
   height: 196px;
 }
 
+@media screen and (max-width: 767.98px) {
+  textarea.order-input {
+    display: none;
+  }
+}
+
 .order-btn {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
 
-  width: 168px;
+  width: 145px;
+  height: 49px;
+
   border: 1px solid rgba(252, 249, 249, 0.1);
   border-radius: 15px;
   padding: 14px 39px;
-  background-color: #1c2225;
+  background-color: var(--black);
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
-  color: #fcf9f9;
+  color: var(--white);
 
   transition: border-color 250ms ease-in-out;
 }
 
 .order-btn:hover,
 .order-btn:focus {
-  border-color: #ecd979;
+  border-color: var(--yellow);
 }
 
 .order-img-wrapper {
@@ -543,7 +596,7 @@ textarea.order-input {
   font-weight: 600;
   font-size: 20px;
   line-height: 1.5;
-  color: #fcf9f9;
+  color: var(--white);
   text-align: center;
   margin-bottom: 8px;
 }
@@ -589,7 +642,7 @@ textarea.order-input {
   font-size: 64px;
   line-height: 1.15625;
   letter-spacing: -0.03em;
-  color: #fcf9f9;
+  color: var(--white);
   max-width: 754px;
   padding-bottom: 40px;
 }
@@ -641,7 +694,7 @@ textarea.order-input {
   background-image: url(../images/black-menu.png);
   background-repeat: no-repeat;
   background-position: bottom;
-  background-color: #ecd979;
+  background-color: var(--yellow);
 
   transform: translateX(100%);
   transition: transform 300ms ease-in-out;
@@ -654,7 +707,7 @@ textarea.order-input {
 .address-menu {
   font-size: 12px;
   line-height: 1.16667;
-  color: #1c2225;
+  color: var(--black);
 
   border: 1px solid rgba(28, 34, 37, 0.1);
   border-radius: 15px;
@@ -677,7 +730,7 @@ textarea.order-input {
 }
 
 .close-menu-btn {
-  stroke: #1c2225;
+  stroke: var(--black);
 }
 
 .menu-links {
@@ -692,5 +745,5 @@ textarea.order-input {
 .menu-link {
   line-height: 1.28571;
   text-transform: uppercase;
-  color: #1c2225;
+  color: var(--black);
 }
