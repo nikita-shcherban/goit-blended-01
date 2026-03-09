@@ -1,5 +1,7 @@
 /* General Styles */
 html {
+  width: 100%;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -12,6 +14,7 @@ html {
 }
 
 body {
+  width: 100%;
   font-family: var(--font-family), sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -342,6 +345,7 @@ button {
 
   background-image: url(../images/grey.png);
   background-size: cover;
+  background-position: bottom left;
   background-repeat: no-repeat;
 }
 
