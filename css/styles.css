@@ -19,6 +19,7 @@ body {
   line-height: normal;
   color: rgba(252, 249, 249, 0.4);
   background-color: var(--black);
+  overflow-x: hidden;
 }
 
 img {
@@ -214,13 +215,6 @@ button {
   fill: var(--white);
 }
 
-@media (max-width: 767px) {
-  .nav-links,
-  .contacts-wrapper {
-    display: none;
-  }
-}
-
 /* Main Section 1 (Page Hero) */
 
 .page-hero {
@@ -336,14 +330,18 @@ button {
 .about-us-img-wrapper::after {
   content: "";
   display: block;
-  width: 545px;
-  height: 484px;
+
+  width: 459px;
+  height: 408px;
+  /* width: 545px;
+  height: 484px; */
 
   position: absolute;
-  bottom: -80px;
-  right: -100px;
+  bottom: -62px;
+  left: 105px;
 
   background-image: url(../images/grey.png);
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -366,16 +364,16 @@ button {
 .collection-list::after {
   content: "";
   display: block;
-  width: 169px;
-  height: 300px;
+  width: 199px;
+  height: 177px;
 
   position: absolute;
-  top: 127px;
-  left: -100px;
+  top: 214px;
+  left: -147px;
 
   background-image: url(../images/yellow.png);
   background-repeat: no-repeat;
-  background-size: 338px 300px;
+  background-size: cover;
   background-position: right top;
   z-index: -1;
 }
@@ -569,7 +567,7 @@ textarea.order-input {
 /* Main Section 6 (Testimonials) */
 
 .page-testimonials {
-  padding-top: 75px;
+  padding-bottom: 80px;
 }
 
 .page-testimonials .second-title {
@@ -589,7 +587,9 @@ textarea.order-input {
   border: 1px solid rgba(252, 249, 249, 0.1);
   border-radius: 4px;
   box-shadow: 0 2px 32px 4px rgba(18, 20, 23, 0.02);
-  flex-basis: calc((100% - 26px * 2) / 3);
+
+  width: 100%;
+  /* flex-basis: calc((100% - 26px * 2) / 3); */
 }
 
 .testimonials-name {
@@ -612,39 +612,52 @@ textarea.order-input {
 .testimonials-text {
   letter-spacing: normal;
   text-align: center;
-  padding: 0 18px 18px 18px;
+  padding: 0 22px 18px 22px;
+  /* padding: 0 18px 18px 18px; */
 }
 
 /* Footer Styles */
 
 .page-footer {
-  margin-top: 150px;
   border-top: 1px solid rgba(252, 249, 249, 0.1);
 }
 
 .page-footer .container {
-  padding-bottom: 40px;
   background-image: url(../images/yellow.png);
-  background-size: 595px 528px;
+  background-size: 452px 401px;
   background-repeat: no-repeat;
-  background-position: 944px -61px;
-  padding-bottom: 0;
+  background-position: center 397px;
+
+  padding-bottom: 40px;
+  padding-bottom: 280px;
 }
 
 .page-footer .nav-links {
+  flex-wrap: wrap;
   justify-content: flex-start;
-  margin-left: 0;
-  padding-top: 24px;
-  margin-bottom: 100px;
+  align-items: flex-start;
+  margin: 40px 0;
+  gap: 25px 40px;
+}
+
+.page-footer .nav-item {
+  width: calc((100% - 40px) / 2);
+}
+
+.page-footer .nav-link {
+  padding: 0;
 }
 
 .footer-text {
-  font-size: 64px;
-  line-height: 1.15625;
+  font-size: 44px;
+  line-height: 1.22727;
   letter-spacing: -0.03em;
+  color: #fcf9f9;
+
+  /* font-size: 64px; */
+  /* line-height: 1.15625; */
   color: var(--white);
-  max-width: 754px;
-  padding-bottom: 40px;
+  /* max-width: 754px; */
 }
 
 /* Menu Mobile Styles */
@@ -746,4 +759,12 @@ textarea.order-input {
   line-height: 1.28571;
   text-transform: uppercase;
   color: var(--black);
+}
+
+/* Mobile Hidden */
+
+@media screen and (max-width: 767.98px) {
+  .mobile-hidden {
+    display: none;
+  }
 }
