@@ -183,12 +183,15 @@ button {
 
 .nav-links {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 25px;
   font-size: 14px;
   line-height: 1.28571;
   text-transform: uppercase;
+}
+
+.page-header .nav-links {
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
   margin-left: 60px;
 }
 
@@ -259,15 +262,6 @@ button {
 
 .header-social .header-icon {
   fill: var(--white);
-}
-
-@media screen and (min-width: 768px) {
-  .address-links {
-    display: none;
-  }
-  .nav-links {
-    display: none;
-  }
 }
 
 /* Main Section 1 (Page Hero) */
@@ -606,12 +600,17 @@ button {
 .order-info {
   display: flex;
   flex-direction: column;
-  margin-bottom: 100px;
 }
 
 .order-form {
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .order-form {
+    margin-bottom: 100px;
+  }
 }
 
 .order-input {
@@ -624,10 +623,17 @@ button {
   color: var(--white);
 
   padding: 14px 16px;
-  width: 508px;
-  height: 50px;
+  width: 335px;
+  height: 47px;
 
   transition: border-color 250ms ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  .order-input {
+    width: 508px;
+    height: 50px;
+  }
 }
 
 .order-input:focus {
@@ -638,14 +644,18 @@ button {
   letter-spacing: -0.02em;
 }
 
-textarea.order-input {
-  margin-bottom: 40px;
+.order-form .comment-input {
   height: 196px;
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 767.98px) {
-  textarea.order-input {
+  .comment-input {
     display: none;
+  }
+
+  .mail-input {
+    margin-bottom: 0;
   }
 }
 
@@ -660,14 +670,25 @@ textarea.order-input {
 
   border: 1px solid rgba(252, 249, 249, 0.1);
   border-radius: 15px;
-  padding: 14px 39px;
+  padding: 14px 36px;
   background-color: var(--black);
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
   color: var(--white);
+  margin: 0 auto;
+  margin-top: 40px;
 
   transition: border-color 250ms ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  .order-btn {
+    width: 168px;
+    height: 50px;
+    padding: 14px 39px;
+    margin-left: 0;
+  }
 }
 
 .order-btn:hover,
@@ -708,7 +729,7 @@ textarea.order-input {
 .testimonials-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 26px;
+  gap: 32px;
 }
 
 .testimonials-item {
@@ -720,7 +741,16 @@ textarea.order-input {
   box-shadow: 0 2px 32px 4px rgba(18, 20, 23, 0.02);
 
   width: 100%;
-  /* flex-basis: calc((100% - 26px * 2) / 3); */
+}
+
+@media screen and (min-width: 768px) {
+  .testimonials-item {
+    width: calc((100% - 32px) / 2);
+  }
+
+  .tablet-hidden {
+    display: none;
+  }
 }
 
 .testimonials-name {
@@ -741,10 +771,18 @@ textarea.order-input {
 }
 
 .testimonials-text {
-  letter-spacing: normal;
+  letter-spacing: 0%;
   text-align: center;
   padding: 0 22px 18px 22px;
   /* padding: 0 18px 18px 18px; */
+}
+
+@media screen and (min-width: 768px) {
+  .testimonials-text {
+    font-size: 16px;
+    line-height: 22px;
+    padding: 0 18px 18px 18px;
+  }
 }
 
 /* Footer Styles */
@@ -759,20 +797,42 @@ textarea.order-input {
   background-repeat: no-repeat;
   background-position: center 397px;
 
-  padding-bottom: 40px;
   padding-bottom: 280px;
+}
+
+@media screen and (min-width: 768px) {
+  .page-footer .container {
+    background-image: url(../images/yellow.png);
+    background-size: 452px 401px;
+    background-repeat: no-repeat;
+    background-position: 594px 0;
+
+    padding-bottom: 40px;
+  }
 }
 
 .page-footer .nav-links {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  margin: 40px 0;
+  padding: 40px 0;
   gap: 25px 40px;
 }
 
 .page-footer .nav-item {
   width: calc((100% - 40px) / 2);
+}
+
+@media screen and (min-width: 768px) {
+  .page-footer .nav-links {
+    gap: 25px;
+    margin-top: 0;
+    margin-bottom: 80px;
+  }
+
+  .page-footer .nav-item {
+    width: auto;
+  }
 }
 
 .page-footer .nav-link {
@@ -781,14 +841,17 @@ textarea.order-input {
 
 .footer-text {
   font-size: 44px;
-  line-height: 1.22727;
-  letter-spacing: -0.03em;
-  color: #fcf9f9;
-
-  /* font-size: 64px; */
-  /* line-height: 1.15625; */
+  line-height: 54px;
+  letter-spacing: -3%;
   color: var(--white);
-  /* max-width: 754px; */
+}
+
+@media screen and (min-width: 768px) {
+  .footer-text {
+    width: 521px;
+    font-size: 54px;
+    line-height: 64px;
+  }
 }
 
 /* Menu Mobile Styles */
@@ -941,6 +1004,12 @@ textarea.order-input {
 
 @media screen and (max-width: 767.98px) {
   .mobile-hidden {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .tablet-hidden {
     display: none;
   }
 }
