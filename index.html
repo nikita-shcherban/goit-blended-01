@@ -75,7 +75,7 @@
             </li>
           </ul>
         </div>
-        <button class="nav-btn desktop-hidden" type="button">
+        <button class="nav-btn desktop-hidden" id="openMenu" type="button">
           <svg class="nav-lines" width="36" height="24">
             <use href="./images/icons.svg#nav"></use>
           </svg>
@@ -109,13 +109,30 @@
             />
             <p class="star-description">all embroidery is made by hand</p>
           </div>
-          <img
-            class="hero-pic animate__animated animate__fadeInLeft"
-            src="./images/girl-hero.jpg"
-            alt="girl photo"
-            width="335"
-            height="545"
-          />
+          <picture class="hero-pic">
+            <source
+              media="(min-width:1280px)"
+              srcset="
+                ./images/desktop-hero.jpg    1x,
+                ./images/desktop-hero@2x.jpg 2x
+              "
+            />
+            <source
+              media="(min-width:768px)"
+              srcset="
+                ./images/tablet-hero.jpg    1x,
+                ./images/tablet-hero@2x.jpg 2x
+              "
+            />
+            <source
+              media="(max-width:767px)"
+              srcset="
+                ./images/mobile-hero.jpg    1x,
+                ./images/mobile-hero@2x.jpg 2x
+              "
+            />
+            <img class="hero-pic" src="./images/mobile-hero.jpg" alt="girl" />
+          </picture>
         </div>
       </section>
 
@@ -392,8 +409,8 @@
       </div>
     </footer>
 
-    <div class="menu-overlay is-hidden">
-      <div class="menu">
+    <div class="menu-overlay is-hidden" id="menuOverlay">
+      <div class="menu" id="menuDisplay">
         <div class="address-close">
           <a href="tel:+380684439426" class="address-menu"
             >+380 (68) 443-94-26</a
@@ -406,19 +423,21 @@
         </div>
         <ul class="menu-links">
           <li>
-            <a class="menu-link" href="">About us</a>
+            <a class="menu-link" href="#about-us">About us</a>
           </li>
           <li>
-            <a class="menu-link" href="">Our collection</a>
+            <a class="menu-link" href="#our-collection">Our collection</a>
           </li>
           <li>
-            <a class="menu-link" href="">Customer order</a>
+            <a class="menu-link" href="#customer-order">Customer order</a>
           </li>
           <li>
-            <a class="menu-link" href="">Testimonials</a>
+            <a class="menu-link" href="#testimonials">Testimonials</a>
           </li>
         </ul>
       </div>
     </div>
+
+    <script src="./main.js"></script>
   </body>
 </html>

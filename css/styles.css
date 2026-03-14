@@ -76,6 +76,7 @@ svg {
 }
 
 .container {
+  min-width: 320px;
   max-width: 375px;
   width: 100%;
   margin: 0 auto;
@@ -324,7 +325,7 @@ button {
   line-height: 48px;
   letter-spacing: -3%;
   color: var(--white);
-  width: 335px;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
