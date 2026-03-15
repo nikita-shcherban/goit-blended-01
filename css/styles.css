@@ -25,6 +25,10 @@ body {
   overflow-x: hidden;
 }
 
+body:has(.menu.is-open) {
+  overflow: hidden;
+}
+
 img {
   display: block;
   max-width: 100%;
