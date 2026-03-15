@@ -301,21 +301,8 @@ button {
 .hero-pic {
   border-radius: 4px;
   object-fit: cover;
-  height: 545px;
-}
-
-@media screen and (min-width: 768px) {
-  .hero-pic {
-    width: 413px;
-    height: 575px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .hero-pic {
+  @media screen and (min-width: 1280px) {
     order: -1;
-    width: 392px;
-    height: 545px;
   }
 }
 
@@ -461,22 +448,35 @@ button {
   left: 105px;
 
   background-image: url(../images/grey.png);
-  background-size: cover;
+  background-size: 459px 408px;
   background-position: bottom left;
   background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+  .about-us-img-wrapper::after {
+    width: calc(545px - 176px);
+    height: 484px;
+
+    bottom: -50px;
+    left: 367px;
+
+    background-size: 545px 484px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .about-us-img-wrapper::after {
+    width: calc(545px - 160px);
+
+    bottom: -80px;
+    left: 259px;
+  }
 }
 
 .about-us-pic {
   border-radius: 4px;
   object-fit: cover;
-  height: 499px;
-}
-
-@media screen and (min-width: 1280px) {
-  .about-us-pic {
-    width: 594px;
-    height: 545px;
-  }
 }
 
 /* Main Section 3 (Page Our Collection) */
@@ -506,18 +506,38 @@ button {
 .collection-list::after {
   content: "";
   display: block;
-  width: 199px;
+  width: calc(199px - 127px);
   height: 177px;
 
   position: absolute;
   top: 214px;
-  left: -147px;
+  right: 283px;
 
   background-image: url(../images/yellow.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 199px 177px;
   background-position: right top;
   z-index: -1;
+}
+
+@media screen and (min-width: 768px) {
+  .collection-list::after {
+    width: calc(338px - 224px);
+    height: 300px;
+
+    top: 117px;
+    right: 622px;
+
+    background-size: 338px 300px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .collection-list::after {
+    width: calc(338px - 169px);
+
+    right: 1061px;
+  }
 }
 
 .collection-item {
@@ -547,14 +567,13 @@ button {
   letter-spacing: 5%;
   text-transform: uppercase;
   color: var(--white);
-
-  margin-bottom: 8px;
 }
 
 @media screen and (min-width: 768px) {
   .vyshyvanka-name {
     font-size: 18px;
     line-height: 18px;
+    margin-bottom: 8px;
   }
 }
 
@@ -601,36 +620,30 @@ button {
 }
 
 .fullviewphoto {
-  height: 500px;
   object-fit: cover;
   object-position: center;
   overflow: hidden;
 }
 
-@media screen and (min-width: 768px) {
-  .fullviewphoto {
-    width: 768px;
-    min-height: 776px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .fullviewphoto {
-    width: 1282px;
-  }
-}
-
 /* Main Section 5 (Customer Order) */
+
+@media screen and (min-width: 768px) and (max-width: 1279.98px) {
+  .page-order {
+    padding-bottom: 100px;
+  }
+}
 
 .page-order .container {
   display: flex;
   flex-wrap: wrap;
+  @media screen and (min-width: 1280px) {
+    justify-content: space-between;
+  }
 }
 
 .order-pic {
   border-radius: 4px;
   object-fit: cover;
-  height: 521px;
 }
 
 .page-order .second-title {
@@ -678,6 +691,12 @@ button {
 @media screen and (min-width: 768px) {
   .order-form {
     margin-bottom: 100px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .order-form {
+    margin-bottom: 0;
   }
 }
 
@@ -766,17 +785,20 @@ button {
 
 .order-img-wrapper {
   position: relative;
+  @media screen and (min-width: 1280px) {
+    order: -1;
+  }
 }
 
 .order-img-wrapper::after {
   content: "";
   display: block;
-  width: 325px;
+  width: 323px;
   height: 484px;
 
   position: absolute;
-  bottom: 0;
-  left: -100px;
+  top: 116px;
+  right: 413px;
 
   background-image: url(../images/grey.png);
   background-repeat: no-repeat;
@@ -784,10 +806,27 @@ button {
   background-position: right top;
 }
 
+@media screen and (min-width: 1280px) {
+  .order-img-wrapper::after {
+    width: 289px;
+    height: 484px;
+
+    top: 156px;
+    right: 349px;
+  }
+}
+
 /* Main Section 6 (Testimonials) */
 
 .page-testimonials {
   padding-bottom: 80px;
+  @media screen and (min-width: 768px) {
+    padding-top: 79px;
+    padding-bottom: 100px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-bottom: 150px;
+  }
 }
 
 .page-testimonials .second-title {
@@ -877,19 +916,23 @@ button {
   background-image: url(../images/yellow.png);
   background-size: 452px 401px;
   background-repeat: no-repeat;
-  background-position: center 397px;
+  background-position: center calc(100% + 201px);
 
   padding-bottom: 280px;
 }
 
 @media screen and (min-width: 768px) {
   .page-footer .container {
-    background-image: url(../images/yellow.png);
-    background-size: 452px 401px;
-    background-repeat: no-repeat;
-    background-position: 594px 0;
+    background-position: calc(100% + 278px) -14px;
 
     padding-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .page-footer .container {
+    background-size: 595px 528px;
+    background-position: calc(100% + 259px) -61px;
   }
 }
 
@@ -908,8 +951,8 @@ button {
 @media screen and (min-width: 768px) {
   .page-footer .nav-links {
     gap: 25px;
-    margin-top: 0;
     margin-bottom: 80px;
+    padding-bottom: 0;
   }
 
   .page-footer .nav-item {
@@ -977,11 +1020,11 @@ button {
   padding: 20px;
   padding-bottom: 0;
   width: 274px;
-  height: 812px;
+  height: 100%;
 
   background-image: url(../images/black.png);
   background-repeat: no-repeat;
-  background-position: center 541px;
+  background-position: -27px calc(100% + 51px);
   background-size: 340px 302px;
   background-color: var(--yellow);
   overflow: hidden;
@@ -997,10 +1040,9 @@ button {
 @media screen and (min-width: 768px) {
   .menu {
     width: 380px;
-    height: 1024px;
 
     background-size: 545px 484px;
-    background-position-y: 640px;
+    background-position: -73px calc(100% + 120px);
 
     padding-left: 32px;
     padding-right: 32px;
@@ -1082,7 +1124,7 @@ button {
   }
 }
 
-/* Mobile Hidden */
+/* Hidden */
 
 @media screen and (max-width: 767.98px) {
   .mobile-hidden {

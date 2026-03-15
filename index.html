@@ -160,13 +160,34 @@
             </p>
           </div>
           <div class="about-us-img-wrapper">
-            <img
-              class="about-us-pic"
-              src="./images/vyshyvanka-about-us.jpg"
-              alt="vyshyvanka photo"
-              width="335"
-              height="499"
-            />
+            <picture class="about-us-pic">
+              <source
+                media="(min-width:1280px)"
+                srcset="
+                  ./images/desktop-about-us.jpg    1x,
+                  ./images/desktop-about-us@2x.jpg 2x
+                "
+              />
+              <source
+                media="(min-width:768px)"
+                srcset="
+                  ./images/tablet-about-us.jpg    1x,
+                  ./images/tablet-about-us@2x.jpg 2x
+                "
+              />
+              <source
+                media="(max-width:767px)"
+                srcset="
+                  ./images/mobile-about-us.jpg    1x,
+                  ./images/mobile-about-us@2x.jpg 2x
+                "
+              />
+              <img
+                class="about-us-pic"
+                src="./images/mobile-about-us.jpg"
+                alt="vyshyvanka about us"
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -261,13 +282,25 @@
 
       <section class="page-fullviewphoto section">
         <h2 class="visually-hidden">Gallery</h2>
-        <img
-          class="fullviewphoto"
-          src="./images/fullview-section.jpg"
-          alt="women in vyshyvanka fullview"
-          width="375"
-          height="500"
-        />
+        <picture class="fullviewphoto">
+          <source
+            media="(min-width:1280px)"
+            srcset="./images/desktop-fv.jpg 1x, ./images/desktop-fv@2x.jpg 2x"
+          />
+          <source
+            media="(min-width:768px)"
+            srcset="./images/tablet-fv.jpg 1x, ./images/tablet-fv@2x.jpg 2x"
+          />
+          <source
+            media="(max-width:767px)"
+            srcset="./images/mobile-fv.jpg 1x, ./images/mobile-fv@2x.jpg 2x"
+          />
+          <img
+            class="fullviewphoto"
+            src="./images/mobile-fv.jpg"
+            alt="girl in vyshyvanka full view"
+          />
+        </picture>
       </section>
 
       <section class="page-order section" id="customer-order">
@@ -315,13 +348,27 @@
             </form>
           </div>
           <div class="order-img-wrapper">
-            <img
-              class="order-pic"
-              src="./images/order-vyshyvanka.jpg"
-              alt="vyshyvanka close up"
-              width="704"
-              height="521"
-            />
+            <picture class="order-pic">
+              <source
+                media="(min-width:1280px)"
+                srcset="
+                  ./images/desktop-order.jpg    1x,
+                  ./images/desktop-order@2x.jpg 2x
+                "
+              />
+              <source
+                media="(min-width:768px)"
+                srcset="
+                  ./images/tablet-order.jpg    1x,
+                  ./images/tablet-order@2x.jpg 2x
+                "
+              />
+              <img
+                class="order-pic"
+                src="./images/tablet-order.jpg"
+                alt="vyshyvanka in order"
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -409,7 +456,7 @@
       </div>
     </footer>
 
-    <div class="menu-overlay is-hidden" id="menuOverlay">
+    <div class="menu-overlay is-hidden desktop-hidden" id="menuOverlay">
       <div class="menu" id="menuDisplay">
         <div class="address-close">
           <a href="tel:+380684439426" class="address-menu"
